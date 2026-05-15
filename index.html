@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GrowthStrategy - LinkedIn Audit</title>
+    <link rel="icon" href="images/logo_image.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -61,8 +63,11 @@
             font-size: 20px;
             letter-spacing: -1px;
             font-family: 'Inter', sans-serif;
+            display: flex;
         }
-
+        .logo p{
+            margin-top: 20px;
+        }
         .nav-menu {
             display: flex;
             gap: 32px;
@@ -88,7 +93,7 @@
             align-items: center;
         }
 
-        .btn-login {
+        /* .btn-login {
             color: #004182;
             background: none;
             border: none;
@@ -100,7 +105,7 @@
 
         .btn-login:hover {
             color: var(--primary-teal);
-        }
+        } */
 
         .btn-started {
             background: #004182;
@@ -112,6 +117,11 @@
             font-size: 14px;
             cursor: pointer;
             transition: background 0.3s;
+        }
+
+        .btn-started a {
+            color: white;
+            text-decoration: none;
         }
 
         .btn-started:hover {
@@ -434,7 +444,7 @@
             border: 1px solid transparent;
             border-radius: 4px;
             padding: 15px 13px;
-            padding-top: 28px;
+            padding-top: 30px;
             font-size: 16px;
             font-family: 'Inter', sans-serif;
             color: #6b7280;
@@ -450,6 +460,7 @@
 
         .form-input::placeholder {
             color: #9ca3af;
+            font-size: small;
         }
 
         .form-submit {
@@ -967,23 +978,26 @@
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <div class="logo">GrowthStrategy</div>
+            <div class="logo">
+                <img src="images/logo_image.png" alt="logo-image" width="60" height="60">
+                <p>GrowthStrategy</p>
+            </div>
             <nav class="nav-menu">
-                <a href="#" class="nav-link">Solutions</a>
-                <a href="#" class="nav-link">Case Studies</a>
-                <a href="#" class="nav-link">Pricing</a>
-                <a href="#" class="nav-link">FAQ</a>
+                <a href="#hero_section" class="nav-link">Solutions</a>
+                <a href="#achivement_section" class="nav-link">Case Studies</a>  
+                <a href="#price_section" class="nav-link">Pricing</a>
+                <a href="#testimonials_section" class="nav-link">Testimonials</a>
+                <a href="#faq_section" class="nav-link">FAQ</a>
             </nav>
             <div class="header-buttons">
-                <button class="btn-login">Log In</button>
-                <button class="btn-started">Get Started</button>
+                <button class="btn-started"><a href="#lead">Get Started</a></button>
             </div>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" id="hero_section">
             <div class="hero-badge">
                 Elevate Your Professional Presence
             </div>
@@ -995,16 +1009,16 @@
             </div>
             <div class="social-proof">
                 <div class="avatar-group">
-                    <img src="https://www.figma.com/api/mcp/asset/3827d355-7d8b-4937-90bc-574d12ab2371" alt="Client" class="avatar">
-                    <img src="https://www.figma.com/api/mcp/asset/bf7de7bf-f8f7-4315-965c-cabf07a582ce" alt="Client" class="avatar">
-                    <img src="https://www.figma.com/api/mcp/asset/14d4e375-24af-4398-9dde-19c35bcf6734" alt="Client" class="avatar">
+                    <img src="images/image1.png" alt="Client" class="avatar">
+                    <img src="images/image2.png" alt="Client" class="avatar">
+                    <img src="images/image3.png" alt="Client" class="avatar">
                 </div>
                 <p class="proof-text">Joined by 500+ top executives</p>
             </div>
         </section>
 
         <!-- Achievement Section -->
-        <section class="achievements">
+        <section class="achievements" id="achivement_section">
             <div class="section-container">
                 <div class="section-header">
                     <h2 class="section-title">Real Growth. Real Results.</h2>
@@ -1043,7 +1057,7 @@
         </section>
 
         <!-- Lead Form Section -->
-        <section class="lead-section">
+        <section class="lead-section" id="lead">
             <div class="lead-content">
                 <h2>Let's Build Your LinkedIn Presence Together</h2>
                 <p class="lead-text">The biggest risk to your professional future isn't failing; it's being forgotten. A strong LinkedIn presence ensures you are the first name that comes to mind in your industry.</p>
@@ -1092,7 +1106,7 @@
         </section>
 
         <!-- Special Offer Section -->
-        <section class="special-offer">
+        <section class="special-offer" id="price_section">
             <div class="offer-overlay"></div>
             <div class="offer-content">
                 <div class="offer-left">
@@ -1125,7 +1139,7 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section class="testimonials">
+        <section class="testimonials" id="testimonials_section">
             <div class="section-container">
                 <div class="section-header">
                     <h2 class="section-title">What Our Clients Say</h2>
@@ -1196,7 +1210,7 @@
         </section>
 
         <!-- FAQ Section -->
-        <section class="faq">
+        <section class="faq" id="faq_section">
             <div class="section-header">
                 <h2 class="section-title">Frequently Asked Questions</h2>
             </div>
@@ -1247,14 +1261,13 @@
             </div>
             <div class="footer-links">
                 <div class="footer-nav">
-                    <a href="#" class="footer-link">Home</a>
-                    <a href="#" class="footer-link">Services</a>
-                    <a href="#" class="footer-link">Audit</a>
-                    <a href="#" class="footer-link">Contact</a>
+                    <a href="#hero_section" class="footer-link">Home</a>
+                    <a href="#achivement_section" class="footer-link">Case Studies</a>  
+                    <a href="#faq_section" class="footer-link">FAQ</a>
+                </div>
                 </div>
                 <div class="social-links">
-                    <a href="#" class="social-icon">f</a>
-                    <a href="#" class="social-icon">in</a>
+                    <a href="https://www.linkedin.com/in/kamilah-amerjan-3a92a0289/" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
@@ -1311,7 +1324,7 @@
                 });
 
                 // Show success message (since response is opaque with no-cors)
-                showFormMessage('✓ Form submitted successfully! We'll be in touch soon.', 'success');
+                showFormMessage('✓ Form submitted successfully! We wll be in touch soon.', 'success');
                 leadForm.reset();
 
             } catch (error) {
@@ -1361,7 +1374,10 @@
 
         // Primary button - scroll to form
         document.querySelector('.btn-primary').addEventListener('click', () => {
-            document.getElementById('leadForm').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('price_section').scrollIntoView({ behavior: 'smooth' });
+        });
+        document.querySelector('.btn-secondary').addEventListener('click', () => {
+            document.getElementById('lead').scrollIntoView({ behavior: 'smooth' });
         });
     </script>
 </body>
